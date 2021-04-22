@@ -5,7 +5,7 @@ import json
 from bson import json_util
 app = Flask(__name__)
 
-cluster = MongoClient('mongodb+srv://talha:talha@cluster0.xvmvm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+cluster = MongoClient(' ') #Enter MONGO_URI Here
 
 db = cluster["FPR"]
 cl = db["Job Requirements"]
@@ -47,7 +47,7 @@ def addmongo():
    { "_id":2,"Title": "Machine Learning Engineer", "Requirements": "2 - 3 years experience with NLP and/or Computer vision.Understanding of data structures, data modelling and software architecture.Deep knowledge of math, probability, statistics and algorithms.Ability to write robust code in Python.Familiarity with machine learning frameworks (like Keras or PyTorch) and libraries (like scikit-learn) and Tensorflow.Proven background in working with CNN / RNN / LTSM networks.Familiar with cloud platforms, Linux, Git.Excellent communication skills.Ability to work in a teamO.utstanding analytical and problem-solving skills.Bachelors in Computer Science, Mathematics or similar field; Master’s degree is a plus", "keywords":" " },
    { "_id":3,"Title": "AI & ML Developer", "Requirements": "Developers needed in India for artificial intelligence and machine learning. Should be fluent in English, productive and skilled in TensorFlow, Keras, SkLearn, CUDA and other relevant technologies and have at least 1 year experience with ML." , "keywords":" "},
    { "_id":4,"Title": "Data Analyst","Requirements":"1. Strong working knowledge on Database 2. Advanced excel for preparing Dashboards 3. Data Warehouse 4. Data Mining and Modelling 5. Data visualization 6. Business Intelligence 7. Experience in any of the business intelligence tools like Tableau, Power BI, Informatica, cognos etc 8. With 5 plus years of experience in Data ware house and Data Analysis", "keywords":" " },
-   { "_id":5,"Title":"Data Scientist", "Requirements":"Subject matter expert of Decision Sciences areas like predictive modelling, data mining, deep-dive strategic analysisAnalytics expertise in Python (preferred) or R, feature engineering experience in SQL/Hive/Spark is a mustSound knowledge in traditional statistical techniques like Survival Analysis, Linear/Logistic regression, Segmentation, Multivariate Analysis etc.Expertise in machine learning techniques like Decision trees, Neural Network, Random Forest, SVM, KNN etc. is an added advantage"}
+   { "_id":5,"Title": "Data Scientist", "Requirements":"Subject matter expert of Decision Sciences areas like predictive modelling, data mining, deep-dive strategic analysisAnalytics expertise in Python (preferred) or R, feature engineering experience in SQL/Hive/Spark is a mustSound knowledge in traditional statistical techniques like Survival Analysis, Linear/Logistic regression, Segmentation, Multivariate Analysis etc.Expertise in machine learning techniques like Decision trees, Neural Network, Random Forest, SVM, KNN etc. is an added advantage"}
 ])
 
 def update(n,kw):
