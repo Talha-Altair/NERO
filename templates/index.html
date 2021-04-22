@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Custom-NER</title>
+  </head>
+  <body>
+      <style>
+          .carousel-item{
+              height:32rem;
+              background:black;
+                position: relative;
+            }
+            .container{
+                position:absolute;
+                bottom:0;
+                left:0;
+                right:0;
+                padding-bottom: 50px;
+            }
+          
+      </style>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption">
+              <h5>Job 1</h5>
+              <h4>Junior Data Scientist</h4>
+              <p>Python: 1 year (Preferred).Python Flask and Pytorch: 1 year (Preferred).Machine learning: 1 year (Preferred).Image Classification and Object Detection algorithms: 1 year (Preferred).Data Science: 1 year (Preferred)</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h3>Job 2</h3>
+              <h4>Machine Learning Engineer</h4>
+              <p>2 - 3 years experience with NLP and/or Computer vision.Understanding of data structures, data modelling and software architecture.Deep knowledge of math, probability, statistics and algorithms.Ability to write robust code in Python.Familiarity with machine learning frameworks (like Keras or PyTorch) and libraries (like scikit-learn) and Tensorflow.Proven background in working with CNN / RNN / LTSM networks.Familiar with cloud platforms, Linux, Git.Excellent communication skills.Ability to work in a teamO.utstanding analytical and problem-solving skills.Bachelors in Computer Science, Mathematics or similar field; Master’s degree is a plus</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h3>Job 3</h3>
+              <h4>AI & ML Developer</h4>
+              <p>Developers needed in India for artificial intelligence and machine learning. Should be fluent in English, productive and skilled in TensorFlow, Keras, SkLearn, CUDA and other relevant technologies and have at least 1 year experience with ML.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h3>Job 4</h3>
+              <h4>Data Analyst</h4>
+              <p>1. Strong working knowledge on Database 2. Advanced excel for preparing Dashboards 3. Data Warehouse 4. Data Mining and Modelling 5. Data visualization 6. Business Intelligence 7. Experience in any of the business intelligence tools like Tableau, Power BI, Informatica, cognos etc 8. With 5 plus years of experience in Data ware house and Data Analysis</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h3>Job 5</h3>
+              <h4>Data Scientist</h4>
+              <p>Subject matter expert of Decision Sciences areas like predictive modelling, data mining, deep-dive strategic analysisAnalytics expertise in Python (preferred) or R, feature engineering experience in SQL/Hive/Spark is a mustSound knowledge in traditional statistical techniques like Survival Analysis, Linear/Logistic regression, Segmentation, Multivariate Analysis etc.Expertise in machine learning techniques like Decision trees, Neural Network, Random Forest, SVM, KNN etc. is an added advantage</p>
+            </div>
+          </div>    
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+      <br>
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <center>
+      <h1 style=color:green>
+        FPR
+    </h1>
+      <script>
+          // Function to get the Selected Text 
+          function getSelectedText() {
+              var selectedText = '';
+
+              // window.getSelection
+              if (window.getSelection) {
+                  selectedText = window.getSelection();
+              }
+              // document.getSelection
+              else if (document.getSelection) {
+                  selectedText = document.getSelection();
+              }
+              // document.selection
+              else if (document.selection) {
+                  selectedText = 
+                  document.selection.createRange().text;
+              } else return;
+              // To write the selected text into the textarea
+              document.testform.selectedtext.value = selectedText;
+          }
+      </script>
+
+      <!--Button to invoke the 
+       function to get the selected text-->
+      <input type="button"
+             value="Add Keyword" 
+             onmousedown="getSelectedText()">
+      
+      <!--Form to show the selected text as output-->
+      <form name="testform" action = "http://0.0.0.0:8080/keyword" method = "POST">
+          <textarea name="selectedtext" 
+                    rows="1"
+                    cols="20"></textarea>
+        <p>Job Number<input type = "number" name = "num" /></p>
+        <p><input class="btn btn-dark" type = "submit" value = "Submit" /></p>
+      </form>
+  </center> 
+  </body>
+</html>
